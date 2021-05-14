@@ -18,10 +18,8 @@
 
 </head>
 <body>
-
-    
-    <!-- Formularios -->
-        <div class="contenedor-formularios">
+       <!-- Formularios -->
+       <div class="contenedor-formularios">
         <!-- Links de los formularios -->
         <ul class="contenedor-tabs">
             <li class="tab tab-segunda active"><a href="#iniciar-sesion">Iniciar Sesión</a></li>
@@ -33,34 +31,34 @@
             <!-- Iniciar Sesion -->
             <div id="iniciar-sesion">
                 <h1>Iniciar Sesión</h1>
-                <form action="#" method="post">
+                <form action="" method="post">
                     <div class="contenedor-input">
                         <label>
                             Usuario <span class="req">*</span>
                         </label>
-                        <input type="text" required>
+                        <input type="text" required minlength="4" maxlength="16">
                     </div>
 
                     <div class="contenedor-input">
                         <label>
                             Contraseña <span class="req">*</span>
                         </label>
-                        <input type="password" required>
+                        <input type="password" required minlength="8" maxlength="16">
                     </div>
                     <p class="forgot"><a href="#">Se te olvidó la contraseña?</a></p>
-                    <input type="submit" class="button button-block" value="Iniciar Sesión">
+                    <input type="submit" class="button button-block" value="Iniciar Sesión"><a href="home.html"></a></li>
                 </form>
             </div>
 
             <!-- Registrarse -->
             <div id="registrarse">
                 <h1>Registrarse</h1>
-                <form action="#" method="post">
+                <form action="" method="post">
                     <div class="contenedor-input">
                         <label>
                             Nombre de Usuario <span class="req">*</span>
                         </label>
-                        <input type="text" required>
+                        <input type="text" required minlength="4" maxlength="16">
                     </div>
                     <div class="contenedor-input">
                             <label>
@@ -69,29 +67,37 @@
                         <input type="email" required>
                     </div>
                     <div class="contenedor-input">
-                        <label>
+                        <label for="pass1">
                             Contraseña <span class="req">*</span>
                         </label>
-                        <input type="password" required>
+                        <input type="password" required minlength="8" maxlength="16" id="pass1">
                     </div>
 
                     <div class="contenedor-input">
-                        <label>
+                        <label for="pass2">
                             Repetir Contraseña <span class="req">*</span>
                         </label>
-                        <input type="password" required>
+                        <input type="password" required minlength="8" maxlength="16" id="pass2">
                     </div>
-                    
+                
                     <input type="submit" class="button button-block" value="Registrarse">
                     <br>
                     <input type="reset" class="button button-block" value="Limpiar Formulario">
+                    
+                    <div id="msg"></div>
+
+                   <div id="error" class="alert alert-danger ocultar" role="alert">
+                        Las Contraseñas no coinciden
+                   </div>
+                   <div id="ok" class="alert alert-success ocultar" role="alert">
+                        Las Contraseñas coinciden
+                   </div>
                 </form>
             </div>
         </div>
     </div>
-
-<script src="js/jquery.js"></script>
-<script src="js/main.js"></script>
+   
+   <script src="js/main.js"></script>
 
 </body>
 
