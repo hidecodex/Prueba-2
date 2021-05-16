@@ -92,7 +92,7 @@ $(document).ready(function(){
 
     function enviarRegistro(){
         // console.log('se enviara el registro');
-        var url = 'http://nriverv.pythonanywhere.com/api/v1/signin/';
+        var url = 'http://nriverv.pythonanywhere.com/api/v1/signup/';
         var datos = new Object();
         datos.username = $('#formUser').val()
         datos.email = $('#formEmail').val()
@@ -114,8 +114,14 @@ $(document).ready(function(){
         var status = validarDatosLogin();
         if(status){
             iniciarSesion();
+            
+    
+            
+
         }
     });
+    
+
     //#endregion Metodo Inicar Sesión
 
     function iniciarSesion(){
@@ -129,6 +135,7 @@ $(document).ready(function(){
             console.log(data);
             // Acá haces todo lo que tengas que hacer al recibir los datos
             // los datos del servidor estan en la variable "data";
+            window.location="home.html";
         });
     }
 
@@ -153,6 +160,7 @@ $(document).ready(function(){
         });
     }
 
+    
     
     
 });
