@@ -5,8 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prueba 2</title>
-    
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway|Ubuntu" rel="stylesheet">
@@ -36,17 +34,17 @@
                         <label>
                             Usuario <span class="req">*</span>
                         </label>
-                        <input type="text" required minlength="4" maxlength="16">
+                        <input type="text" required minlength="4" maxlength="16" id="loginUser">
                     </div>
 
                     <div class="contenedor-input">
                         <label>
                             Contraseña <span class="req">*</span>
                         </label>
-                        <input type="password" required minlength="8" maxlength="16">
+                        <input type="password" required minlength="8" maxlength="16" id="loginPass">
                     </div>
                     <p class="forgot"><a href="#">Se te olvidó la contraseña?</a></p>
-                    <input type="submit" class="button button-block" value="Iniciar Sesión"><a href="home.html"></a></li>
+                    <input type="button" id="btnLogin" class="button button-block" value="Iniciar Sesión"><a href="home.html"></a></li>
                 </form>
             </div>
 
@@ -58,46 +56,50 @@
                         <label>
                             Nombre de Usuario <span class="req">*</span>
                         </label>
-                        <input type="text" required minlength="4" maxlength="16">
+                        <input type="text" id="formUser" required minlength="4" maxlength="16">
                     </div>
                     <div class="contenedor-input">
                             <label>
                                 Email <span class="req">*</span>
                             </label>
-                        <input type="email" required>
+                        <input type="email" id="formEmail" required>
                     </div>
                     <div class="contenedor-input">
                         <label for="pass1">
                             Contraseña <span class="req">*</span>
                         </label>
-                        <input type="password" required minlength="8" maxlength="16" id="pass1">
+                        <input type="password" required minlength="8" maxlength="16" id="formPass1">
                     </div>
 
                     <div class="contenedor-input">
                         <label for="pass2">
                             Repetir Contraseña <span class="req">*</span>
                         </label>
-                        <input type="password" required minlength="8" maxlength="16" id="pass2">
+                        <input type="password" required minlength="8" maxlength="16" id="formPass2">
                     </div>
                 
-                    <input type="submit" class="button button-block" value="Registrarse">
+                    <input type="button" class="button button-block" id="btnreg" value="Registrarse">
                     <br>
                     <input type="reset" class="button button-block" value="Limpiar Formulario">
                     
                     <div id="msg"></div>
 
-                   <div id="error" class="alert alert-danger ocultar" role="alert">
+                   <!-- 
+                       <div id="error" class="alert alert-danger ocultar" role="alert">
                         Las Contraseñas no coinciden
                    </div>
                    <div id="ok" class="alert alert-success ocultar" role="alert">
                         Las Contraseñas coinciden
                    </div>
+                   -->
                 </form>
             </div>
         </div>
     </div>
    
-   <script src="js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/main.js"></script>
 
 </body>
 

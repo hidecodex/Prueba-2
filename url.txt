@@ -1,0 +1,4 @@
+API Validaciones: http://nriverv.pythonanywhere.com/api/v1/validation/all/
+API Registro: http://nriverv.pythonanywhere.com/api/v1/signup/
+Foto del perfil de zeth.94
+API Signin: http://nriverv.pythonanywhere.com/api/v1/signin/
